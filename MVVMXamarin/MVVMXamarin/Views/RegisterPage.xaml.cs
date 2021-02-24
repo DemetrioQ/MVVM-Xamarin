@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using MVVMXamarin.Services;
+using MVVMXamarin.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -15,25 +16,8 @@ namespace MVVMXamarin
         public RegisterPage()
         {
             InitializeComponent();
+            BindingContext = new RegisterViewModel(new AlertService(), new NavigationService());
         }
 
-        private async void RegisterButton_Clicked(object sender, EventArgs e)
-        {
-            if (string.IsNullOrEmpty(name.Text) || string.IsNullOrEmpty(email.Text) || string.IsNullOrEmpty(password.Text) || string.IsNullOrEmpty(confirmPassword.Text))
-            {
-                await DisplayAlert("Error", "Debe de llenar todos los campos", "Ok");
-            }
-            else if(password.Text != confirmPassword.Text)
-            {
-                await DisplayAlert("Error", "Las contraseñas ingresadas son diferentes", "Ok");
-            }
-            else
-            {
-                await Application.Current.MainPage.DisplayAlert("Bienvenido", "Hola, " + name.Text, "Ok");
-                var homePage = new HomeTabbedPage();
-                NavigationPage.SetHasNavigationBar(homePage, false);
-                await Navigation.PushAsync(homePage);
-            }
-        }
     }
 }

@@ -3,13 +3,15 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MVVMXamarin.RegisterPage">
     <ContentPage.Content>
-        <StackLayout BackgroundColor="White" VerticalOptions="Center" Margin="10">
-            <Image Source="IntecIcono" HeightRequest="150"></Image>
-            <Entry x:Name ="name" Placeholder="Nombre"  HorizontalOptions="FillAndExpand" ></Entry>
-            <Entry x:Name ="email" Placeholder="Email" HorizontalOptions="FillAndExpand" ></Entry>
-            <Entry x:Name="password" Placeholder="Password"  IsPassword="True" HorizontalOptions="FillAndExpand"></Entry>
-            <Entry x:Name="confirmPassword" Placeholder="Confirm Password" IsPassword="True" HorizontalOptions="FillAndExpand" ></Entry>
-            <Button Text="Register" TextColor="White"  BackgroundColor="Red" HorizontalOptions="FillAndExpand"  Clicked="RegisterButton_Clicked"></Button>
-        </StackLayout>
+        <ScrollView>
+            <StackLayout BackgroundColor="White" VerticalOptions="Center" Margin="10">
+                <Image Source="IntecIcono" HeightRequest="150"></Image>
+                <Entry Placeholder="Nombre"  HorizontalOptions="FillAndExpand" Text="{Binding Name}"></Entry>
+                <Entry Placeholder="Email" HorizontalOptions="FillAndExpand" Text="{Binding Email}" ></Entry>
+                <Entry Placeholder="Password"  IsPassword="True" HorizontalOptions="FillAndExpand" Text="{Binding Password}"></Entry>
+                <Entry Placeholder="Confirm Password" IsPassword="True" HorizontalOptions="FillAndExpand" Text="{Binding ConfirmPassword}" ></Entry>
+                <Button Text="Register" TextColor="White"  BackgroundColor="Red" HorizontalOptions="FillAndExpand" Command="{Binding RegisterCommand}"></Button>
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

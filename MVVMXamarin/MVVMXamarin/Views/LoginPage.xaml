@@ -3,13 +3,15 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MVVMXamarin.LoginPage">
     <ContentPage.Content>
-        <StackLayout BackgroundColor="White"  VerticalOptions="Center" Margin="10">
-            <Image Source="IntecIcono" HeightRequest="150"></Image>
-            <Entry x:Name ="email" Placeholder="Email" HorizontalOptions="FillAndExpand"></Entry>
-            <Entry x:Name="password" Placeholder="Password" IsPassword="True" HorizontalOptions="FillAndExpand" ></Entry>
-            <Button Text="Login" TextColor="White" BackgroundColor="Red" HorizontalOptions="FillAndExpand"  Clicked="LoginButton_Clicked"></Button>
-            <Button Text="Register" TextColor="Red" BackgroundColor="White" Clicked="RegisterButton_Clicked"  HorizontalOptions="Center"></Button>
+        <ScrollView>
+            <StackLayout BackgroundColor="White"  VerticalOptions="Center" Margin="10">
+                <Image Source="IntecIcono" HeightRequest="150"></Image>
+                <Entry Placeholder="Email" HorizontalOptions="FillAndExpand" Text="{Binding Email}"></Entry>
+                <Entry Placeholder="Password" IsPassword="True" HorizontalOptions="FillAndExpand" Text="{Binding Password}"></Entry>
+                <Button Text="Login" TextColor="White" BackgroundColor="Red" HorizontalOptions="FillAndExpand" Command="{Binding LoginCommand}"></Button>
+                <Button Text="Register" TextColor="Red" BackgroundColor="White" Command="{Binding RegisterCommand}"  HorizontalOptions="Center"></Button>
 
-        </StackLayout>
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
