@@ -1,24 +1,59 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MVVMXamarin.HomePage">
+             x:Class="MVVMXamarin.Views.HomePage">
     <ContentPage.Content>
-        <StackLayout Margin="15" BackgroundColor="White">
-            <Label Text="FEATURED COURSE" FontAttributes="Bold" FontSize="Body"></Label>
-            <Label Text="Stress will always be around. The trick is finding a few stress-busters you can enjoy!" FontSize="Body"></Label>
-            <Image Source="YogaPose" HeightRequest="175"></Image>
-            <Label Text="Foundations" FontSize="34" HorizontalOptions="Center" FontAttributes="Bold" TextColor="black"></Label>
-            <Label Text="This guided meditation for beginners course will introduce you to mindfulness" HorizontalTextAlignment="Center" FontSize="Body"></Label>
-            <Label Text="10 min" HorizontalOptions="Center" Margin="2"></Label>
-            <Label Text="ON THE GO" FontAttributes="Bold"></Label>
-            <Grid RowDefinitions="50,50,50" ColumnDefinitions="*,*">
-                <Label Text="After work" Grid.Row="0" Grid.Column="0" BackgroundColor="LightGreen" TextColor="Black" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="18"></Label>
-                <Label Text="Tough day" Grid.Row="0" Grid.Column="1" BackgroundColor="DeepSkyBlue" TextColor="White" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="18"></Label>
-                <Label Text="Good morning" Grid.Row="1" Grid.Column="0" BackgroundColor="Orange" TextColor="White" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="18"></Label>
-                <Label Text="Sleep" Grid.Row="1" Grid.Column="1" BackgroundColor="LightGray" TextColor="Black" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="18"></Label>
-                <Label Text="Quick break" Grid.Row="2" Grid.Column="0" BackgroundColor="LightSkyBlue" TextColor="Black" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="18"></Label>
-                <Label Text="Big event" Grid.Row="2" Grid.Column="1" BackgroundColor="Salmon" TextColor="White" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="18"></Label>
-            </Grid>
+        <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+            <Label Text="Discovery" FontSize="25" HorizontalOptions="Center" Margin="20" TextColor="black" FontAttributes="Bold"></Label>
+            <ScrollView>
+                <Grid RowDefinitions="170,170,170" ColumnDefinitions="*,*">
+                    <Frame Grid.Row="0" Grid.Column="0">
+                        <StackLayout >
+                            <Image Source="{Binding BarAndHotelsMenuOption.Image}" HeightRequest="75"></Image>
+                            <Label Text="{Binding BarAndHotelsMenuOption.Title}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" HeightRequest="100" TextColor="Black" FontSize="Body" FontAttributes="Bold"></Label>
+                            <Label Text="42 Places"  HorizontalTextAlignment="Center" VerticalTextAlignment="Center"></Label>
+                        </StackLayout>
+                    </Frame>
+                    <Frame Grid.Row="0" Grid.Column="1">
+                        <StackLayout >
+                            <Image Source="{Binding FreeDinningMenuOption.Image}" HeightRequest="75"></Image>
+                            <Label Text="{Binding FreeDinningMenuOption.Title}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" HeightRequest="100" TextColor="Black" FontSize="Body" FontAttributes="Bold"></Label>
+                            <Label Text="15 Places"  HorizontalTextAlignment="Center" VerticalTextAlignment="Center"></Label>
+                        </StackLayout>
+                    </Frame>
+                    <Frame Grid.Row="1" Grid.Column="0">
+                        <StackLayout>
+                            <Image Source="{Binding CafesMenuOption.Image}" HeightRequest="75"></Image>
+                            <Label Text="{Binding CafesMenuOption.Title}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" HeightRequest="100" TextColor="Black" FontSize="Body" FontAttributes="Bold"></Label>
+                            <Label Text="28 Places"  HorizontalTextAlignment="Center" VerticalTextAlignment="Center"></Label>
+                        </StackLayout>
+                    </Frame>
+                    <Frame Grid.Row="1" Grid.Column="1">
+                        <StackLayout >
+                            <Image Source="{Binding NearbyMenuOption.Image}" HeightRequest="75"></Image>
+                            <Label Text="{Binding NearbyMenuOption.Title}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" HeightRequest="100" TextColor="Black" FontSize="Body" FontAttributes="Bold"></Label>
+                            <Label Text="34 Places"  HorizontalTextAlignment="Center" VerticalTextAlignment="Center"></Label>
+                        </StackLayout>
+                    </Frame>
+                    <Frame Grid.Row="2" Grid.Column="0">
+                        <StackLayout>
+                            <Image Source="{Binding FastFoodsMenuOption.Image}" HeightRequest="75"></Image>
+                            <Label Text="{Binding FastFoodsMenuOption.Title}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" HeightRequest="100" TextColor="Black" FontSize="Body" FontAttributes="Bold"></Label>
+                            <Label Text="29 Places"  HorizontalTextAlignment="Center" VerticalTextAlignment="Center"></Label>
+                        </StackLayout>
+                    </Frame>
+                    <Frame Grid.Row="2" Grid.Column="1">
+                        <StackLayout >
+                            <Image Source="{Binding FeaturedFoodsMenuOption.Image}" HeightRequest="75"></Image>
+                            <Label Text="{Binding FeaturedFoodsMenuOption.Title}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" HeightRequest="100" TextColor="Black" FontSize="Body" FontAttributes="Bold"></Label>
+                            <Label Text="21 Places"  HorizontalTextAlignment="Center" VerticalTextAlignment="Center"></Label>
+                        </StackLayout>
+                    </Frame>
+                </Grid>
+            </ScrollView>
         </StackLayout>
+
+
+
     </ContentPage.Content>
 </ContentPage>

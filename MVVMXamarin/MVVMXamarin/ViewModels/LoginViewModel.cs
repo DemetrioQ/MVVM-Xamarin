@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Input;
 using MVVMXamarin.Services;
+using MVVMXamarin.Views;
 using Xamarin.Forms;
 
 namespace MVVMXamarin.ViewModels
@@ -32,7 +33,7 @@ namespace MVVMXamarin.ViewModels
 
         private async void OnRegister()
         {
-            await NavigationService.NavigationAsync(new MVVMXamarin.RegisterPage(), true);
+            await NavigationService.NavigationAsync(new MVVMXamarin.Views.RegisterPage(), true);
         }
     }
 }

@@ -17,6 +17,14 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Models\" />
+    <Compile Update="Views\YogaPage.xaml.cs">
+      <DependentUpon>YogaPage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Views\HomePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>

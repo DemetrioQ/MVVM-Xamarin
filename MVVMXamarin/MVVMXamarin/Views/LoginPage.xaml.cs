@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using MVVMXamarin.Services;
 
-namespace MVVMXamarin
+namespace MVVMXamarin.Views
 {
     public partial class LoginPage : ContentPage
     {

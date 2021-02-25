@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-            x:Class="MVVMXamarin.HomeTabbedPage"
+            x:Class="MVVMXamarin.Views.HomeTabbedPage"
             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core" 
-            xmlns:MVVMXamarin="clr-namespace:MVVMXamarin"
+            xmlns:MVVMXamarin="clr-namespace:MVVMXamarin.Views"
             android:TabbedPage.ToolbarPlacement="Bottom"
             android:TabbedPage.BarItemColor="Black"
             android:TabbedPage.BarSelectedItemColor="Red"
             >
   <!--Pages can be added as references or inline-->
     <MVVMXamarin:HomePage Title="Home" IconImageSource="HomeIcon"></MVVMXamarin:HomePage>
-    <ContentPage Title="Option 1" IconImageSource="Option1"></ContentPage>
+    <MVVMXamarin:YogaPage Title="Yoga Info" IconImageSource="YogaIcon"></MVVMXamarin:YogaPage>
     <ContentPage Title="Option 2" IconImageSource="Option2"></ContentPage>
 </TabbedPage>

@@ -1,16 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Xamarin.Forms;
 
-namespace MVVMXamarin
+using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
+
+namespace MVVMXamarin.Views
 {
-    public partial class MainPage : ContentPage
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class YogaPage : ContentPage
     {
-        public MainPage()
+        public YogaPage()
         {
             InitializeComponent();
         }
